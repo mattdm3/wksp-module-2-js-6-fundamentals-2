@@ -12,12 +12,18 @@ let verifyEquals = require('../../assets/verify-equals');
 //  - Convert the filled array into a string (use the join method) and return it
 
 function f(str) {
+    let array = [];
+    for (i = str.length - 1; i >= 0; i--) {
+        array.push(str[i]);
+    }
+    return array.join("");
+
 
 }
 
 // We need 5 test cases.
-let inputs = [];
-let outputs = [];
+let inputs = ["hello", "ola", "bonjour", "soccer", "test"];
+let outputs = ["olleh", "alo", "ruojnob", "reccos", "tset"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

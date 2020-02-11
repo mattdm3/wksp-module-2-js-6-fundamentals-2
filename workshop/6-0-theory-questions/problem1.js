@@ -4,6 +4,8 @@ function square(x) {
     return x * x;
 }
 
+
+
 function decrement(x) {
     return x - 1;
 }
@@ -22,23 +24,22 @@ function reverseString(str) {
 // Q1
 square(decrement(square(decrement(3))));
 
-
+// 9 
 
 
 // Q2
 decrement(decrement(square(square(3))));
 
-
+// 79
 
 
 // Q3
 duplicateString(reverseString("hello"));
 
-
-
+//olleholleh
 
 // Q4
 reverseString(duplicateString(duplicateString("foo")));
 
-
+// oofoofoofoof
 

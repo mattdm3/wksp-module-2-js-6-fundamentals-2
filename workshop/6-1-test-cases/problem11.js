@@ -1,4 +1,4 @@
-let verifyEquals = require('./verify-equals.js');
+let verifyEquals = require('../../assets/verify-equals');
 
 // Problem 11
 // ----------
@@ -6,12 +6,22 @@ let verifyEquals = require('./verify-equals.js');
 // If any element in the array is not a number, skip it. If the array is empty, return zero.
 
 function f(arr) {
-
+    let count = 0;
+    if (arr === []) {
+        return 0;
+    } else {
+        for (i = 0; i < arr.length; i++) {
+            if (typeof arr[i] === "number") {
+                count = count + arr[i];
+            }
+        }
+    }
+    return count;
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = [[1, 2], [2, 3], [3, 4], [8, 2], [4, 3], [7, 4, 4], ["hello", 3, 3]];
+let outputs = [3, 5, 7, 10, 7, 15, 6];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

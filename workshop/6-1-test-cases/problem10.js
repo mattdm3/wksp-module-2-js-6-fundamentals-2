@@ -11,12 +11,16 @@ let verifyEquals = require('../../assets/verify-equals');
 //    - Use the toUpperCase string method
 
 function f(str) {
-
+  if (str === str.toUpperCase()) {
+    return str.toLowerCase();
+  } else if (str === str.toLowerCase()) {
+    return str.toUpperCase();
+  }
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = ["hello", "world", "WELCOME", "to", "THE", "MATRIX"];
+let outputs = ["HELLO", "WORLD", "welcome", "TO", "the", "matrix"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

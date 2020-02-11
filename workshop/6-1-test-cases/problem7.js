@@ -13,15 +13,21 @@ let verifyEquals = require('../../assets/verify-equals');
 // f(["foo", -1]) // ""
 
 function f(arr) {
-    
+    let count = arr[1];
+    let array = "";
+    for (i = 0; i < count; i++) {
+        array = array.concat(arr[0]);
+    }
+    return array;
+
 }
 
 // Step 2
 // We need 7 test cases.
 // Don't forget to test all of the question parameters
 
-let inputs = [];
-let outputs = [];
+let inputs = [["bean", 3], ["drip", 1], ["v60", 2], ["espresso", 1], ["caffeine", 2], ["donut", 4], ["cookie", 3]];
+let outputs = ["beanbeanbean", "drip", "v60v60", "espresso", "caffeinecaffeine", "donutdonutdonutdonut", "cookiecookiecookie"];
 
 // Step 3
 // Run this file in the debugger.

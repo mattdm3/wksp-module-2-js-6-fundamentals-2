@@ -12,6 +12,65 @@
 // - initial button color is 'gold'
 // - initial opacity is '100'
 
+const btnList = document.querySelector("#btn-list");
+
+for (id = 1; id < 5; id++) {
+    let btnId = document.getElementById(`btn-${id}`);
+    btnId.style.opacity = "100";
+    btnId.style.backgroundColor = "gold";
+}
+
+function toggleColor(id, color) {
+    let element = document.getElementById(id);
+    let currentColor = element.style.backgroundColor;
+
+    element.style.backgroundColor = currentColor === "gold" ? color : "gold";
+
+}
+
+function handleReset() {
+    for (id = 1; id < 5; id++) {
+        let btnId = document.getElementById(`btn-${id}`);
+        btnId.style.opacity = "100";
+        btnId.style.backgroundColor = "gold";
+
+        if (id === 4) {
+            btnId.classList.remove('jitters');
+        }
+    }
+}
+
+function handleClick(e) {
+    btnId = e.target.id;
+    let element = document.getElementById(btnId);
+
+    switch (btnId) {
+        case "btn-1":
+            element.style.opacity = element.style.opacity === "100" ? "0" : "100";
+            break;
+        case "btn-2":
+            toggleColor(btnId, "crimson");
+            break;
+        case "btn-3":
+            toggleColor(btnId, "lightblue");
+            break;
+        case "btn-4":
+            element.classList.toggle("jitters");
+            break;
+        case "reset":
+            handleReset();
+        default:
+            break;
+
+    }
+}
+
+btnList.addEventListener("click", handleClick)
+
+
+
+
+
 // NO MODIFICATIONS OUTSIDE OF THE EXERCISE FOLDER (i.e. the css is read-only)
 
 // STEP 2

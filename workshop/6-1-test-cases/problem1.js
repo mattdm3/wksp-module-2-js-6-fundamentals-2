@@ -8,6 +8,12 @@ let verifyEquals = require('../../assets/verify-equals');
 // If the string does not have a first character, return undefined.
 
 function f(str) {
+    if (typeof str != "string") {
+        return undefined
+    } else {
+        return str.split("")[0];
+
+    }
 
 }
 
@@ -17,6 +23,13 @@ function f(str) {
 
 let inputs = ['max', 'bacon', 'Zebra', 'lion', ''];
 let outputs = ['m', 'b', 'Z', 'l', undefined];
+
+f("max");
+f("bacon");
+f("Zebra");
+f("lion");
+f("");
+
 
 // Step 3
 // Run this file in the debugger.
